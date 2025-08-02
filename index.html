@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingresos y Pagos</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Registro de Ingresos y Pagos</h1>
+        <div class="form-section">
+            <h2>Ingresos</h2>
+            <input type="text" id="incomeDescription" placeholder="Descripción">
+            <input type="number" id="incomeAmount" placeholder="Monto">
+            <button onclick="addIncome()">Agregar Ingreso</button>
+        </div>
+
+        <div class="form-section">
+            <h2>Pagos</h2>
+            <input type="text" id="expenseDescription" placeholder="Descripción">
+            <input type="number" id="expenseAmount" placeholder="Monto">
+            <button onclick="addExpense()">Agregar Pago</button>
+        </div>
+
+        <h2>Resumen</h2>
+        <div id="summary">
+            <p>Total Ingresos: $<span id="totalIncome">0</span></p>
+            <p>Total Pagos: $<span id="totalExpenses">0</span></p>
+            <p>Balance: $<span id="balance">0</span></p>
+        </div>
+
+        <canvas id="incomeExpenseChart"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
